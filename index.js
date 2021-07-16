@@ -1,5 +1,5 @@
 //Module
-var rl =require("readline-sync");
+var readLine =require("readline-sync");
 const chk=require("chalk");
 const log=console.log;
 const quesColor=chk.cyanBright;
@@ -7,9 +7,9 @@ const answColor=chk.green;
 
 //Opening
 
-if( rl.keyInYN("Do you want to play this Quiz? "))
+if( readLine.keyInYN("Do you want to play this Quiz? "))
 {
-  var name=rl.question("Please write your Name: ")
+  var name=readLine.question("Please write your Name: ")
   }else
 {
   log('Exit');
@@ -141,7 +141,7 @@ function play(ques,answ)
 {
   var isAnswerCorrect;
 
-  var answer=rl.question(quesColor(ques));
+  var answer=readLine.question(quesColor(ques));
 
   if(answer.toLocaleLowerCase()===answ.toLocaleLowerCase())
  {
